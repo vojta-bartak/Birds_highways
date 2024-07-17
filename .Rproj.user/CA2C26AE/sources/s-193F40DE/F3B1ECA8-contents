@@ -1,11 +1,6 @@
 library(tidyverse)
 library(readxl)
-library(sf)
 library(lme4)
-library(performance)
-library(sjPlot)
-library(spdep)
-library(car)
 
 # Data -------------------------------------------------------------------------------------------------------------------------
 df <- read_xlsx("data.xlsx", sheet=1) %>% 
@@ -53,19 +48,14 @@ stepAIC <- function(model, thres = 2){
 # Modeling strategies ----------------------------------------------------
 m.Species1 <- glmer(Species~distance_sc+e2_sc+e3_sc+field+meadow+ruderal+water+forest_sc+village_sc+traffic_sc+alt_sc+
                       (1|Highway), data=df, family="poisson")
-m.Species2 <- glmer(Species~Type*(e2_sc+e3_sc+field+meadow+ruderal+water+forest_sc+village_sc+traffic_sc+alt_sc)+
+m.Species2 <- glmer(Species~noise*(e2_sc+e3_sc+field+meadow+ruderal+water+forest_sc+village_sc+alt_sc)+
                       (1|Highway), data=df, family="poisson")
-m.Species3 <- glmer(Species~distance_sc+e2_sc+e3_sc+field+meadow+ruderal+water+forest_sc+village_sc+traffic_sc+alt_sc+distance_sc:traffic_sc+
+m.Species3 <- glmer(Species~noise+e2_sc+e3_sc+field+meadow+ruderal+water+forest_sc+village_sc+alt_sc+
                       (1|Highway), data=df, family="poisson")
-m.Species4 <- glmer(Species~noise*(e2_sc+e3_sc+field+meadow+ruderal+water+forest_sc+village_sc+alt_sc)+
-                      (1|Highway), data=df, family="poisson")
-m.Species5 <- glmer(Species~noise+e2_sc+e3_sc+field+meadow+ruderal+water+forest_sc+village_sc+alt_sc+
-                      (1|Highway), data=df, family="poisson")
-AIC(m.Species1, m.Species2, m.Species3, m.Species4, m.Species5)
+AIC(m.Species1, m.Species2, m.Species3)
 
 m.Species1.sel <- stepAIC(m.Species1)
 m.Species2.sel <- stepAIC(m.Species2)
 m.Species3.sel <- stepAIC(m.Species3)
-m.Species4.sel <- stepAIC(m.Species4)
-m.Species5.sel <- stepAIC(m.Species5)
-AIC(m.Species1.sel, m.Species2.sel, m.Species3.sel, m.Species4.sel, m.Species5.sel)
+
+AIC(m.Species1.sel, m.Species2.sel, m.Species3.sel)
