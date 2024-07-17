@@ -8,7 +8,7 @@ library(spdep)
 library(car)
 
 # Data -------------------------------------------------------------------------------------------------------------------------
-df <- read_xlsx("Data_Štěpán_Hladík 30.8.2023.xlsx", sheet=1) %>% 
+df <- read_xlsx("data.xlsx", sheet=1) %>% 
   mutate(forest_sc = scale(Forest),
          village_sc = scale(Village),
          distance_sc = scale(Distance),
