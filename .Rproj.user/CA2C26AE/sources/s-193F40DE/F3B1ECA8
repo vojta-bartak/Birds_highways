@@ -3,7 +3,7 @@
     "path": "C:/Users/vojta/ownCloud/Birds_highways/modeling_strategies.R",
     "project_path": "modeling_strategies.R",
     "type": "r_source",
-    "hash": "2684446633",
+    "hash": "419981934",
     "contents": "",
     "dirty": false,
     "created": 1721214497543.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "3,0",
-        "scrollLine": "0"
+        "cursorPosition": "57,34",
+        "scrollLine": "45"
     },
     "folds": "",
-    "lastKnownWriteTime": 1721218026,
+    "lastKnownWriteTime": 1721219160,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1721218026513,
+    "last_content_update": 1721219160065,
     "read_only": false,
     "read_only_alternatives": []
 }
