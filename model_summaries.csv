@@ -1,0 +1,10 @@
+"model";"type";"r2";"ranef";"singular"
+"Species";"GLMM";47.3;"(1 | Highway)";FALSE
+"Farmland";"GLMM";22.3;"(1 | Highway)";FALSE
+"Woodland";"GLMM";42;"(1 | Highway/transect)";FALSE
+"Ground";"GLMM";14.4;"(1 | Highway)";TRUE
+"Shrub";"GLM";51.6;"-";FALSE
+"Canopy";"GLMM";24;"(1 | Highway)";TRUE
+"Cavity";"GLM";31.9;"-";TRUE
+"Insect";"GLM";59.9;"-";FALSE
+"Granivor";"GLM";18.7;"-";TRUE

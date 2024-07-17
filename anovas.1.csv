@@ -1,0 +1,11 @@
+"predictor";"sign.Species";"sign.Farmland";"sign.Woodland";"sign.Ground";"sign.Shrub";"sign.Canopy";"sign.Cavity";"sign.Insect";"sign.Granivor"
+"distance_sc";TRUE;TRUE;TRUE;TRUE;TRUE;TRUE;TRUE;TRUE;TRUE
+"e2_sc";TRUE;FALSE;TRUE;FALSE;FALSE;NA;NA;TRUE;NA
+"e3_sc";TRUE;NA;TRUE;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+"field";FALSE;FALSE;FALSE;NA;NA;NA;TRUE;NA;NA
+"ruderal";TRUE;NA;TRUE;NA;TRUE;NA;TRUE;NA;NA
+"water";TRUE;FALSE;TRUE;TRUE;NA;NA;NA;TRUE;NA
+"village_sc";TRUE;NA;FALSE;NA;NA;TRUE;NA;NA;NA
+"traffic_sc";TRUE;FALSE;NA;NA;TRUE;TRUE;NA;NA;NA
+"alt_sc";FALSE;NA;TRUE;NA;TRUE;NA;TRUE;TRUE;TRUE
+"forest_sc";NA;NA;NA;NA;NA;FALSE;NA;NA;NA
